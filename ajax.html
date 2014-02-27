@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><title> AJAX</title></head>
+<body>
+
+<script>
+	
+	var xhr = new XMLHttpRequest();
+	//console.log(xhr.readyState);
+	
+	//open
+	xhr.open('GET', 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Hopetoun_falls.jpg/300px-Hopetoun_falls.jpg', true);
+	//console.log(xhr.readyState);
+	xhr.setRequestHeader('User-Agent','ajax');
+	//xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	
+	xhr.onreadystatechange = function(){
+		
+		//console.log(xhr.readyState);
+		//console.log(xhr.status);
+		
+		console.log(xhr.getResponseHeader('Content-Type'));
+		console.log(xhr.getAllResponseHeaders());
+		
+		
+	
+	}
+	//console.log(xhr.readyState);
+	xhr.send(null);
+	
+	//console.log(xhr.readyState);
+
+</script>
+</body>
+</html>

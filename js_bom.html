@@ -1,0 +1,74 @@
+<h1> Browser Object Model (BOM) </h1>
+<form>
+	<input type="text" id="txtFieldOnOpener" />
+	<button onclick="opneWin()">Open Popup</button>
+	<button onclick="return autoScroll()">autoScroll</button>
+	
+</form>
+<script>
+
+//history.go(-3);
+//history.back();
+//history.back();
+//history.back();
+//history.forward();
+
+//document.location = 'http://yahoo.com';
+document.location.replace('http://bing.com');
+
+
+
+
+
+//alert(screen.width);
+//alert(screen.height);
+//alert(screen.availWidth);
+//alert(screen.availHeight);
+//alert(screen.pixelDepth);
+//alert(screen.colorDepth);
+
+//'use strict'
+
+//console.log(this);
+//console.log(window);
+//console.log(self);
+
+function atest(){
+	console.log(this);
+}
+//atest()	
+
+//var aTest = new atest();
+//var popup = "";
+//new window
+function opneWin(){
+	
+//window.title="Title set from javascript";
+console.log(screen.width);
+console.log(screen.height);
+
+
+/*
+	popup = window.open('js_popup.html','cm','height=200, width=300, scrollbars=1');
+	//alert('test');
+	//popup.document.getElementById('txtFieldOnPopup').value = 'I am set from opener';
+		
+	popup.moveTo(100,200);
+	//sleep(500);
+	popup.moveBy(50,100);
+	
+	popup.resizeTo(200,300);
+	popup.resizeBy(100,100);
+	
+	//alert('sd');
+	*/
+}
+
+	function autoScroll(){
+		popup.scrollBy(100,100);		
+		return false;		
+	}
+
+
+
+</script>

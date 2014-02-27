@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>this is title</title>
+</head>
+<body>
+	<h1>Visiting DOM</h1>
+	<p id="para"> A paragraph with a <strong>Bolded</strong> and <em>italic</em> word </p>
+	<ul>
+		<li>List item 1</li>
+		<li>List item 2</li>
+		<li>List item 3</li>
+	</ul>
+	<script>
+		console.log(document.body.childNodes.length);
+		console.log(document.body.childNodes[0].nodeType);
+		console.log(document.body.childNodes[0].nodeName);
+		console.log(document.body.childNodes[0].nextSibling);
+		console.log(document.body.childNodes[0].nextSibling.nodeName);
+		console.log(document.body.childNodes[0].nextSibling.nextSibling);
+		console.log(document.body.childNodes[0].nextSibling.firstChild.nodeType);
+		console.log(document.body.childNodes[0].nextSibling.firstChild.nodeValue);
+		
+		var x = document.getElementById("para");
+		var e = document.createElement('p');
+		var txt = document.createTextNode('Hello');
+		e.appendChild(txt);
+		//alert(e.innerHTML);		
+		//console.log(e.nodeType);
+		document.body.appendChild(e);
+		document.body.insertBefore(x,e);
+		
+		
+	</script>
+</body>
+</html>

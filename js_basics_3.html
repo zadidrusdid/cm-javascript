@@ -1,0 +1,278 @@
+<script>
+	/*
+	//type casting	
+	//to number
+	
+	var sum = 12 * '12';
+	//alert(typeof sum + "\n" + sum);
+	
+	var anAdd = 12 + 12;
+	var anAdd2 = 12 + '12';
+	var anAdd3 = '12' + 12;
+	
+	//alert(anAdd +"\n" + anAdd2 +"\n" + anAdd3 + "\n");
+	
+	var aPreAdd = 12 + 12 + '12';
+	//alert(aPreAdd);
+	
+	var aPreAdd = '12' + 12 + 12;
+	//alert(aPreAdd);
+	
+	var aPreAdd = 12 + 12 * '12';
+	//alert(aPreAdd);
+	
+	var aPreAdd = 12 + 12 * '12abcd';
+	//alert(aPreAdd);
+	
+	//alert(Number('12abcd'));
+	//alert(parseInt('asas12'));
+	
+	//string
+	var aString = 12 +'';
+	//alert(typeof aString);
+	
+	var aUrl = document.location + '';
+	//alert(typeof aUrl);
+	
+	var aUrl = document.location.toString();
+	//alert(typeof aUrl + "\n" + aUrl);
+	
+	//bool
+	var aBool = 'aSrting';
+	//alert(typeof aBool + "\n" + aBool + "\n" + typeof !!aBool +  "\n" + !!aBool);
+	
+	//alert(true + "\n" + true );
+	//alert(true + false );
+	
+	//alert( (true + "\n"+ true) && true);
+	//alert( true + "\n"+ true && true +"\n"+ true && false +"\n"+ false && true + "\n" + false && false ); 
+	//alert( true + "\n"+ (true && true) +"\n"+ (true && false) +"\n"+ (false && true) + "\n" + (false && false) ); 
+	var anUndefinedVariable;
+	var aNaN = 12 * 'qwqwqw';
+	//alert( !!anUndefinedVariable );
+	//alert( !!'' );
+	//alert( !!"" );
+	//alert( !!0 );
+	//alert( !! null );
+	//alert( !! aNaN );
+	//alert( typeof NaN );
+	
+	//anything else is true	
+	alert( typeof {} );
+	alert( !! {} );
+	
+	alert( typeof [] );
+	alert( !! [] );
+	alert( !! '0');	
+	
+	if( true ){
+		alert('I am in if block');
+	}	
+
+	if( false ){
+		alert('I am in if block');
+	}else{
+		alert('I am in else block');
+	}
+	
+	if( true ){
+		alert('I am in 1st if block');
+	}else if( true ){
+		alert('I am in 2nd if block');
+	}else{
+		alert('I am in else block');
+	}
+	
+	if( false ){
+		alert('I am in 1st if block');
+	}else if( true ){
+		alert('I am in 2nd if block');
+	}else{
+		alert('I am in else block');
+	} 
+	
+	//advance: block scope
+	var a = 'hello: outside if';
+	b = 'how are you: outside if';
+	if(true){
+		var a = 'hello';
+		b = 'how r u';
+		//let c = 'let xyz';
+	}	
+	alert(a +"\n"+ b +"\n");
+	
+	//ternary operator
+	
+	var a = (true)? 'Ist value' : '2nd value';
+	alert(a);
+	
+	var b = (false)? 'Ist value' : '2nd value';
+	alert(b);
+	
+	
+	var aSwitch = '12';
+	
+	switch( aSwitch ){
+		
+		case 1:
+			alert('I am 1');
+			break;
+		case 12:
+		case '12':
+			alert('I am  Number 12 OR String 12');
+			break;
+		case '123':
+			alert('I am string 123');
+			break;
+		case 'abc':
+			alert('I am string abc');
+			break;
+		default:
+			alert( 'I am default'  );
+		
+	}
+	
+	
+	//Loop
+	var counter = 0;
+	//exercise 1:  an infinite loop
+	for(   ; counter < 5     ;    ){
+		
+		alert(counter);
+	}
+	//exercise 2: 
+	for(   ; counter < 5     ;  counter++  ){
+		
+		alert(counter);
+	}
+	//exercise 3: 
+	for( counter = 0; counter < 5     ;  counter++  ){
+		
+		alert(counter);
+	}
+	
+	var counter = 0;
+	while(counter < 5 ){
+		
+		alert(counter);
+		counter++
+	}
+	*/
+	//first execute and then check the condition
+	
+	/*var counter = 0;
+	do{
+		alert(counter);
+		counter++
+	}while(counter < 5);
+	
+	
+	for( counter = 0; counter < 5 ;  ){		
+		//alert(counter++);
+		alert(++counter);
+	}
+	
+	
+	var anObj = {
+		a:'a string',
+		b:12
+	}
+	
+	//list all properties and methods/functions of window object
+	//anObj = this;
+	
+	for(i in anObj){
+		document.write( i + ": "+ anObj[i] +"<br />");
+		//document.write( i + ": "+ eval(anObj+'.'+i) +"<br />");
+	}
+	
+	
+	
+	//use of continue in a loop
+	for( i=0; i < 10; i++ ){
+	
+		//ex1: print all  numbers
+		document.write(i + "<br />");
+		
+		//OR
+		
+		//ex2: print odd numbers
+		if( i%2 == 1){
+			continue;
+		}
+		document.write(i + "<br />");
+	}
+	
+	
+	//use of break in a loop
+	for( i=0; i < 10; i++ ){
+	
+		//ex3: never print more than 3 digits
+		if( i > 2 ){
+			break;
+		}
+		document.write(i + "<br />");
+	}
+	
+	
+	
+	//operators
+	
+	// Math operators: + , - , * , /, %
+	// Concatenation operator: +    :::: note:::: + has 2 roles ( an overloaded operator )
+	// logical operator: ! > < >= <=  || &&
+	// assignment : = 
+	// equality : ==, ===, !=, !==, <>,
+	
+	var a = 12;
+	var b = '12';
+	
+	if( a == b ){
+		alert( 'I am in if block');
+	}else{
+		alert( 'I am in else block');
+	}
+	
+	if( a === b ){
+		alert( 'I am in if block');
+	}else{
+		alert( 'I am in else block');
+	}
+	*/
+	var xyz;
+	var a = xyz || 'none';
+	alert(a);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</script>

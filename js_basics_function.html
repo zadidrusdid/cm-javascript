@@ -1,0 +1,135 @@
+<script>
+
+var Cmbd1 = {
+	name:'Abd1'
+}
+
+var Cmfi1 = {
+	name:'Afi1'
+}
+
+function Cmbd(){
+	//this.name = 'Abd';
+}
+
+function Cmfi(){
+	this.name = 'Afi';
+}
+
+var aDev = new Cmbd();
+var aDev1 = {name:'aDev1'};
+
+//console.log(aDev1.name);
+//aDev1.__proto__ = Cmbd1;
+var aDev1 = Object.create(Cmbd1);
+console.log(aDev1.name);
+console.log(aDev1.__proto__ == aDev1.prototype);
+
+aDev1.__proto__ = Cmfi1;
+console.log(Cmfi1.isPrototypeOf(aDev1));
+//console.log(aDev.__proto__ == aDev.prototype);
+//aDev1.__proto__ = Cmbd1;
+
+//console.log(aDev.__proto__ == aDev.prototype);
+//console.log(aDev1.__proto__ == aDev1.prototype);
+/**/
+
+
+var aDevBd = new Cmbd();
+//console.log(aDevBd);
+//aDevBd.__proto__ = new Cmfi;
+console.log(aDevBd.__proto__);
+aDevBd.__proto__ = new Cmfi;
+
+console.log( aDevBd.name );
+console.log(Cmfi.isPrototypeOf(aDevBd));
+console.log(aDevBd.constructor);
+
+/*
+'use strict'
+function a(){
+	var x = 'Hi';
+	return function b(){
+		console.log(x);
+	}
+	
+	//return b;
+}
+
+//console.log( a());
+
+a()();
+//x();
+*/
+/*
+function afnc(){
+
+
+}
+
+var aFunc = function (){
+
+}
+
+var anoFunc = new Function('a','return a');
+
+
+//scope
+var y = 0;
+y1 = 0;
+function a(){
+	
+	var x = 0;
+	x1 = 0;
+}
+
+
+var name = 'Win';
+function A(){
+	this.name = 'A';
+}
+
+var anObj = new A();
+
+console.log(this);//window
+
+function sayHello(){
+	console.log('Hi '+ this.name +" "+ arguments[0]);
+}
+window.sayHello();
+
+anObj.sayHi = sayHello;
+
+//anObj.sayHi();
+
+sayHello.call(anObj,'xyz');
+sayHello.apply(anObj,['xyz']);//apply will work similarly but arguments should be passed as an array
+
+*/
+
+/*
+this = {}
+return this
+
+
+return xyz
+*/
+
+function a(){
+	
+	return this;
+}
+
+console.log(new a());
+
+
+
+
+
+
+
+
+
+
+
+</script>

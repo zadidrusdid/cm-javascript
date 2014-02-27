@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>DOM</title>
+</head>
+	<body>
+	<h1>Revisiting DOM</h1>
+	<p id="para"> This <b>is</b> a P</p>
+	<ul>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+			<li>List Item 4</li>
+	</ul>
+	<script>
+		//var allNodes = document.getElementsByTagName('*');
+		//var allNodes = document.getElementsByTagName('html');
+		/*
+		var b = document.getElementsByTagName('body')[0];
+		var sb = document.body;
+		var cOFBody = document.getElementsByTagName('body')[0].childNodes;
+			
+		console.log(cOFBody.length);//3
+		console.log(cOFBody);//3
+		
+		var eP = document.getElementById('para');
+		console.log(eP.parentNode);
+		console.log(eP.nextSibling.nextSibling);
+		console.log(eP.previousSibling.previousSibling);
+		console.log(eP.childNodes[0]);
+		console.log(eP.firstChild);
+		console.log(eP.lastChild);
+		//console.log(eP.childNodes);
+		
+		console.log(eP.nodeName);
+		console.log(eP.nodeType);
+		console.log(eP.nodeValue);
+		
+		console.log(eP.firstChild.nodeName);
+		console.log(eP.firstChild.nodeType);
+		console.log(eP.firstChild.nodeValue);
+		
+		console.log(Node.ELEMENT_NODE);
+		console.log(Node.ATTRIBUTE_NODE);
+		console.log(Node.TEXT_NODE);
+		
+		
+		var eP = document.getElementById('para');
+		eP.firstChild.nodeValue = "&copy;This <b>is</b> set dynamically";
+		
+		console.log(eP.innerHTML);
+		//eP.innerHTML = "&copy;This is set dynamically";
+		
+		
+		
+		var aP = document.createElement('P');
+		var aTxt = document.createTextNode('Hello how are you?');
+		aP.appendChild(aTxt);
+		
+		var b = document.getElementsByTagName('body')[0];
+		console.log(b.childNodes.length);
+		document.body.appendChild(aP);
+		console.log(b.childNodes.length);
+		
+		var eP = document.getElementById('para');
+		var returnedV = document.body.appendChild(eP);
+		console.log(returnedV);
+		
+		
+		var parentElement = document.getElementsByTagName('body')[0];
+		var aP = document.createElement('P');
+		//var aTxt = document.createTextNode('Hello how are you?');
+		//aP.appendChild(aTxt);
+		console.log(parentElement.childNodes.length);
+		//parentElement.appendChild(aP);
+		var eP = document.getElementById('para');
+		parentElement.insertBefore(aP, eP);
+		
+		console.log(parentElement.childNodes.length);
+		
+		*/
+		
+		var b = document.getElementsByTagName('body')[0];
+		var eP = document.getElementById('para');
+		var ePClone = eP.cloneNode(false);
+		
+		console.log(b.childNodes.length);
+		document.body.appendChild(ePClone);
+		console.log(b.childNodes.length);
+	
+</script>
+
+</body>
+
+</html>
+

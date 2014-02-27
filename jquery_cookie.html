@@ -1,0 +1,20 @@
+<button onClick="setCookie();">Set Cookie</button>
+<button onClick="getCookie();">Get Cookie</button>
+
+<script>
+
+	function setCookie(){
+		var expDate = new Date();
+		expDate.setMonth(expDate.getMonth()+2);
+		
+		var cookieVal = "bd";
+		document.cookie = "codemate=bd;path=/;expitres="+expDate.toGMTString();		
+		
+	}
+	
+	function getCookie(){
+		alert(document.cookie);
+	}
+	
+
+</script>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+
+<body >
+<style>
+ul li{
+}
+
+</style>
+<h1>Events</h1>
+
+<p>
+Mouse Event: click, dblclick, mouseout,mouseover, mouseup, (mousehover) | ms | mouseenter, mouseleave
+</p>
+<!--
+<ul>
+	<li onmouseover="console.log('liover1')" onmouseout="console.log('liout1')"><a href="#" onmouseover="console.log('over1')" onmouseout="console.log('out1')">Link 1</a></li>
+	<li onmouseover="console.log('over1')" onmouseout="console.log('out1')"><a href="#" onmouseover="console.log('liover2')" onmouseout="console.log('liout2')">Link 2</a></li>
+	<li onmouseover="console.log('liover1')" onmouseout="console.log('liout1')"><a href="#" onmouseover="console.log('over3')" onmouseout="console.log('out3')">Link 3</a></li>
+</ul>
+
+<form onsubmit="return eventHandler()">
+	<input type="text" /> <input type="submit" value="submit" />
+</form>
+<script>
+	function eventHandler(){
+		alert('Hello');
+		return false;
+	}
+
+	//document.forms[0].submit();
+	console.log(document.forms);
+
+</script>
+
+<div id="myDiv">Hello world</div>
+<div  onclick="this.style.backgroundColor='red'">Hello world</div>
+
+<div><a id="aLink1" href="#" onclick="eventHandler(event)">Linked Hello world</a></div>
+
+<div><a id="aLink2" href="#" onclick="eventHandler2(this)">Linked Hello world</a></div>
+
+<div><a id="aLink3" href="#" onclick="eventHandler3(event, this, 'foo')">Linked Hello world</a></div>
+
+<div><a id="aLink4" href="#" >Linked4 Hello world</a></div>
+-->
+<div id="iddiv" onclick="customizedalert(event,this)">
+	<ul id="idul" onclick="customizedalert(event,this)">
+		<li id="idli" onclick="customizedalert(event,this)">
+			<a href="#" onclick="customizedalert(event,this)">A Link</a>
+		</li>
+	</ul>
+</div>
+
+<div id="iddiv1" >
+	<ul id="idul1" >
+		<li id="idli1" >
+			<a id="idlnk1" href="#" >A Link</a>
+		</li>
+	</ul>
+</div>
+<script>
+	function customizedalert(evt, obj){
+		//alert(obj.tagName);
+		//evt.stopPropagation();
+		alert(this.tagName);
+		//evt.cancelBubble = true;
+	}
+	
+	var aLink = document.getElementById('idlnk1');
+	var ali = document.getElementById('idli1');
+	var aul = document.getElementById('idul1');
+	var adiv = document.getElementById('iddiv1');
+	
+	aLink.addEventListener('click',customizedalert,true);
+	ali.addEventListener('click',customizedalert,true);
+	aul.addEventListener('click',customizedalert,true);
+	adiv.addEventListener('click',customizedalert,true);
+	
+	function eventHandler(evt){
+	
+		var target = evt.target || evt.srcElement;	
+		alert(evt);		
+		target.style.backgroundColor='green';	
+		return false;
+	}
+	
+	function eventHandler2(obj){
+
+		obj.style.backgroundColor='green';	
+		return false;
+	}
+	
+	function eventHandler3(evt, obj, foo){
+		console.log(evt);
+		console.log(obj);
+		console.log(foo);
+		obj.style.backgroundColor='green';	
+		return false;
+	}
+	
+	function eventHandler4(){
+		console.log(arguments[0]);
+		alert('hello');
+		srcEl = arguments[0].target || arguments[0].srcElement ;
+		//console.log(obj);
+		//console.log(foo);
+		//obj.style.backgroundColor='green';
+		srcEl.style.backgroundColor='green';		
+		//	return false;
+		//arguments[0].preventDefault();
+	}
+	
+	var aDiv4 = document.getElementById('aLink4');
+	//aDiv4.addEventListener('click', eventHandler4, false);
+	//aDiv4.addEventListener('click', eventHandler4, false);
+	//aDiv4.attachEvent('onclick', eventHandler4);
+	//aDiv4.attachEvent('onclick', eventHandler4);
+	/*
+	
+	//traditional
+	var aDiv = document.getElementById('aLink');
+	//aDiv.onclick = eventHandler;
+	
+	//w3
+	//aDiv.addEventListener('click', eventHandler, false);
+	
+	//ms model
+	//aDiv.attachEvent('onclick', eventHandler);
+	
+	//compatible
+	if(aDiv.addEventListener){
+		aDiv.addEventListener('click', eventHandler, false);
+	}else if(aDiv.attachEvent){
+		aDiv.attachEvent('onclick', eventHandler);
+	}
+	
+	*/
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

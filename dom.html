@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head><title>DOM Scripting</title>
+<script>
+	function showPic(evt){
+			//alert(pic)
+			//var target = document.getElementById('placeholder');
+			//alert(target.getAttribute('src'));
+			//target.setAttribute('src',pic);
+			//target.src = pic;
+			
+			/*var sourcePic = pic.getAttribute('href');
+			var target = document.getElementById('placeholder');
+			target.setAttribute('src',sourcePic);
+			//alert(sourcePic);
+			return false;
+			*/
+			
+			var srcImage = this.getAttribute('href');
+			var target = document.getElementById('placeholder');
+			target.setAttribute('src',srcImage);
+			evt.preventDefault();
+			//return false;
+	}
+	
+	function attachEventToLink(){
+	
+		if(!document.getElementsByTagName){
+			var allLinks = document.getElementsByTagName('A');
+			
+			for(var i=0;i < allLinks.length; i++){
+				//console.log(allLinks[i]);
+				allLinks[i].addEventListener('click',showPic,false);
+				
+			}
+		//console.log(allLinks);
+		}
+		
+	}
+
+	window.onload = attachEventToLink;
+	
+</script>
+
+</head>
+<body>
+<h1> DOM </h1>
+
+		<ul>
+			<!--
+			<li> <a href="#" title="A colorful flower" onclick="showPic('images/1.jpg');return false;">Flower</a></li>
+			<li> <a href="#" title="Bottles" onclick="showPic('images/2.jpg');">Bottles</a></li>
+			-->
+			<li> <a href="images/1.jpg" title="A colorful flower" >Flower</a></li>
+			<li> <a href="images/2.jpg" title="Bottles" >Bottles</a></li>
+			
+			
+		</ul>
+		<img id="placeholder" src="images/placeholder.jpg" alt="My Image Gallery" />
+		<p id="description">Choose an Image</p>
+
+
+<script>
+//set1 : retrieve
+//getElementById()
+//parent, child, siblings
+//getElementsByTagName
+
+//set2: description
+//childNodes
+//nodeType
+//nodeValue
+//
+
+//set3: Manipulation
+//createElement
+//append
+//insertAfter
+
+</script>
+</body>
+</html>

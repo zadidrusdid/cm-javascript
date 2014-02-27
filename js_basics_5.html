@@ -1,0 +1,153 @@
+<script>
+	/*
+	// function
+	function anExampleFunction(a){
+		
+		//alert(a);
+		//alert(arguments[1])
+		
+		//return a;
+	}
+	
+	//console.log(anExampleFunction(2,3));
+	
+	// Object
+	// 1
+	var anObj = new Object();
+	var anObj2 = Object();
+	
+	anObj.name = 'A';
+	anObj2.name = 'B';
+	
+	//2
+	var aLiteralsObj = {};
+	aLiteralsObj.name = 'aLit1';
+	var aLiteralsObj2 = {name:'aLit2'};
+	
+	aLiteralsObj2.sayHello = function(){
+		return this.name
+	}
+	
+	//3
+	//var anObjectUsingCreate = Object.create();
+	var anObjectUsingCreate = Object.create(null);
+	
+	//console.log(aLiteralsObj2.hasOwnProperty('sss'));
+	//console.log(aLiteralsObj2.hasOwnProperty('name'));
+	
+	//console.log(typeof aLiteralsObj2);
+	//console.log(aLiteralsObj2 instanceof Object);
+	//console.log(aLiteralsObj2 instanceof Object);	
+	
+	//context : not the definition but the calling 
+	
+	var Person1 = {};
+	var Person2 = {};
+	
+	//var Person3 = new Object();	
+	
+	var A = Person1;
+	A.name = 'a';
+	var B = Person2;
+	B.name = 'b';
+	
+		
+	A.sayHello = function(){ alert(this.name) }	
+	
+	//B.sayHello = A.sayHello;
+	
+	//A.sayHello();
+	//B.sayHello();
+	
+	//var aa = Object.create(A, {age:{value:34}});
+	//console.log(aa.age);
+	//console.log( Object.getPrototypeOf(aa) );
+	
+	*/
+	
+	var A = {
+		name:'aa'
+	}
+	
+	var B = {
+		name:'bb'
+	}
+	
+	var C = {};
+	
+	//var C = {name:'cc'}
+	
+	//C.__proto__ = A;
+	
+	C.__proto__ = B;
+	
+	//console.log(C.name);
+	//console.log(C.hasOwnProperty('name'));
+	
+	//console.log(B.isPrototypeOf(C));
+	
+	
+	var D = Object.create(A);
+	
+	/*console.log(D.name);
+	console.log(D.hasOwnProperty('name'));	
+	console.log(A.isPrototypeOf(D));
+	
+	console.log(object.getPrototypeOf(C));*/
+	
+	var b;
+	function Person(){
+		
+		
+		this.b = function(){
+			alert('personB');
+		}
+	}
+	
+	var a = new Person();
+	//var a =  Person();
+	/*
+	console.log(a instanceof Person);
+	console.log(typeof a);
+	
+	var b = function Person2(){
+	
+	}
+	
+	//alert(b);
+	//console.log(b());
+	
+	
+	var b = function(){
+	
+	}
+	
+	//alert(b);
+	//console.log(b());
+	
+	;(function(){
+		alert('hello');
+	})();
+	
+	(function(){
+		alert(arguments[0]);
+	})(2,3,4);
+	*/
+	
+	
+	console.log(a.b());
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>

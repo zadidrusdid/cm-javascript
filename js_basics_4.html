@@ -1,0 +1,94 @@
+<script>
+	"use strict";
+	//array
+	//create
+	
+	var anArray = new Array();
+	var anotherArray = Array();
+	var yetAnotherArray = [];
+	
+	//alert(typeof anArray + typeof anotherArray + typeof yetAnotherArray);	
+	//var anArray = new Array('12','qwqw');
+	//anArray.length = 5;
+	//alert(anArray);
+	
+	var anArray1 = new Array('12');
+	var anArray1 = new Array(12);
+	//alert(typeof anArray1);
+	
+	var anotherArray = Array(11,'12','qwqw');	
+	//alert(typeof anotherArray.toString());
+	
+	//alert();
+	anotherArray[30] = 'I am at postion 30';
+	//console.log(anotherArray + "\n"+ anotherArray.length);
+	
+	anotherArray['assoc'] = 'I am assoc';
+	anotherArray[3.14] = 'I am 3.14';
+	//alert(anotherArray + "\n"+ anotherArray.length);
+	
+	//alert(anotherArray['assoc']);
+	//alert(anotherArray.assoc);
+	//alert(anotherArray[3.14]);
+	//alert(anotherArray.3.14);
+	//alert(anotherArray.3.14);
+	/*
+	console.log(anotherArray);
+	
+	var yetAnotherArray = [];	
+	//alert(typeof anArray + typeof anotherArray + typeof yetAnotherArray);
+	
+	var anObject = new Object();
+	anObject['aAssoc'] = 'aAssoc';
+	anObject.aAssoc = 'aAssoc2';
+	anObject[12] = 12;
+	//anObject.12 = 123;//invalid: error
+	anObject['12'] = '13';
+	//anObject.'145' = '145'; //invalid: error
+	//anObject.'aaa' = 'aaa'; ////invalid: error
+	
+	//anObject.aAssoc = new Object();
+	anObject.aAssoc.a = 'aAssoc a';
+	
+	console.log(anObject.aAssoc.a);
+	
+	
+	var anObject = new Array();
+	anObject['aAssoc'] = 'aAssoc'; //valid:property
+	anObject.aAssoc = 'aAssoc2'; //reassing
+	anObject[12] = 12; //valid: in position 12
+	//anObject.12 = 123;//invalid: error
+	anObject['12'] = '13';
+	//anObject.'145' = '145'; //invalid: error
+	//anObject.'aaa' = 'aaa'; ////invalid: error	
+	
+	anObject.aAssoc = 'aAssoc a';
+	
+	//anObject.length = 0;
+	
+	console.log( anObject.toSource() );
+	*/
+	
+	var yetAnotherArray = ['12','13abc',['12','13abc'],'we'];
+	var yetAnotherArray = Array('12','13abc','we');
+	yetAnotherArray[2] = Array('12','13abc');
+	console.log(yetAnotherArray);
+	
+	//
+	var sum = 0;
+	function add(){
+		//return 0;
+		sum = arguments[0] + arguments[1];
+		alert(sum +"w/ param");
+	}
+	
+	function add(a,b){
+		//return 0;
+		//return arguments[0] + arguments[1];
+		sum = a + b;
+		alert(sum +"-param");
+	}
+	
+	add();
+	
+</script>
